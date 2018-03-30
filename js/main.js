@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("#menu-toggle").on("click", function() {
     $("nav .nav-items, nav, #menu-toggle").toggleClass("open");
   });
-
+  
   var controller = new ScrollMagic.Controller,
     scene = new ScrollMagic.Scene({
       triggerElement: "#home",
@@ -105,8 +105,6 @@ $(document).ready(function() {
     });
   });
 
-  resizeGrid()
-
   $("#js-rotating").Morphext({
     animation: "fadeInDown",
     separator: ",",
@@ -114,7 +112,7 @@ $(document).ready(function() {
     complete: function() {}
   });
 });
-$(window).on('resize', resizeGrid)
+
 $(window).load(function() {
   $('html').animate({
     scrollTop: 0
@@ -129,14 +127,3 @@ $(window).load(function() {
       $('body').removeClass('loading');
     });
 });
-
-function resizeGrid() {
-  $('#work .grid-item').css("height", "");
-  var startHeight = $('#work .grid-item:nth-of-type(2)').outerHeight();
-  var startWidth = $('#work .grid-item:nth-of-type(2)').outerWidth();
-  var doubleHeight = startHeight * 2;
-  var doubleWidth = startWidth * 2;
-  $('#work .grid-item').css("height", startHeight);
-  $('#work .grid-item:nth-of-type(4)').css("height", startHeight * 2);
-  $('#work .grid-item:nth-of-type(1)').css("width", "100%");
-}

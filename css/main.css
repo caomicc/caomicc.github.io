@@ -30,7 +30,7 @@ h2 { font-weight: 600; font-size: 32px; color: #222629; letter-spacing: 0; margi
 
 @media screen and (max-width: 767px) { h2 { line-height: 22px; font-size: 18px; } }
 
-nav { position: fixed; z-index: 1000; transition: 0.2s ease-in-out; width: 100%; height: 140px; background: white; top: 0; }
+nav { position: fixed; z-index: 1000; transition: 0.2s ease-in-out; width: 100%; box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.25); height: 70px; background: white; top: 0; }
 
 @media screen and (max-width: 767px) { nav { height: 70px; } }
 
@@ -160,11 +160,11 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 
 .moi .middle .text a:focus::after, .moi .middle .text a:hover::after { opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); transform: translateY(0px); }
 
-.portfolio { position: relative; background: white; padding: 30px; }
+.portfolio { position: relative; background: white; padding: 30px 35px; }
 
 @media screen and (max-width: 991px) { .portfolio { padding: 0; } }
 
-.portfolio .grid-item { padding: 30px; width: 50%; float: left; overflow: hidden; opacity: 0; transition: all 0.5s linear; }
+.portfolio .grid-item { margin: 25px; width: calc(50% - 50px); float: left; overflow: hidden; box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.25); transition: all 0.5s linear; }
 
 @media screen and (max-width: 991px) { .portfolio .grid-item { padding: 0; } }
 
@@ -179,6 +179,8 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 .portfolio .grid-item.bottom .picture .overlay { bottom: 30px; top: initial; transform: translateY(0); }
 
 @media screen and (max-width: 767px) { .portfolio .grid-item.bottom .picture .overlay { padding-top: 100%; bottom: 15px; } }
+
+.portfolio .grid-item.full-width { width: 100%; }
 
 .portfolio .grid-item .picture { display: block; width: 100%; padding: 30px; height: auto; position: relative; overflow: hidden; background-size: cover; background-color: #F9F9F9; background-position: center center; height: 100%; }
 
