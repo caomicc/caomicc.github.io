@@ -3,57 +3,51 @@ $(document).ready(function() {
   $("#menu-toggle").on("click", function() {
     $("nav .nav-items, nav, #menu-toggle").toggleClass("open");
   });
-  
-  var controller = new ScrollMagic.Controller,
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#home",
-      duration: "100%"
-    }).setClassToggle("#nav1", "active").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#about",
-      triggerHook: .9,
-      duration: "100%"
-    }).setClassToggle("#nav2", "active").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#work",
-      triggerHook: 1,
-      duration: $("#work .row").height() - 300
-    }).setClassToggle("#nav3", "active").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#footer",
-      triggerHook: .9
-    }).setClassToggle("#nav4", "active").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#about",
-      triggerHook: .5
-    }).setClassToggle("#animate", "fadeUp").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#about"
-    }).setClassToggle("#animate-two", "fadeUp").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerHook: .4,
-      triggerElement: "#about"
-    }).setClassToggle("#hand", "tada").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#grid-trigger",
-      triggerHook: .5
-    }).setClassToggle("#colleton", "fadeUp").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#grid-trigger",
-      triggerHook: .45
-    }).setClassToggle("#manch", "fadeUp").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#manch",
-      offset: 60,
-      triggerHook: .3
-    }).setClassToggle("#cal", "fadeUp").addTo(controller),
-    scene = new ScrollMagic.Scene({
-      triggerElement: "#cal",
-      offset: 60,
-      triggerHook: .3
-    }).setClassToggle("#realestate", "fadeUp").addTo(controller)
 
-  // particlesJS.load('particles', 'node_modules/particles.js-master/particles.json', function() {});
+  var controller = new ScrollMagic.Controller,
+
+    // NOTE: diff between two below is .5 seconds, same trigger point just tranistion delay
+    scene = new ScrollMagic.Scene({
+      triggerElement: "#about",
+      triggerHook: .5
+    }).setClassToggle("#animate", "fadeUp")
+    .addTo(controller),
+
+    scene = new ScrollMagic.Scene({
+      triggerElement: "#about"
+    }).setClassToggle("#animate-two", "fadeUp")
+    .addTo(controller),
+
+
+    // NOTE: TADA!
+    scene = new ScrollMagic.Scene({
+      triggerHook: 0,
+      triggerElement: "#about"
+    }).setClassToggle("#hand", "tada")
+    .addTo(controller),
+
+    scene = new ScrollMagic.Scene({
+      triggerElement: "#grid-trigger",
+      triggerHook: .5
+    }).setClassToggle("#item_one", "fadeUp").addTo(controller),
+
+    scene = new ScrollMagic.Scene({
+      triggerElement: "#grid-trigger",
+      triggerHook: .40
+    }).setClassToggle("#item_two", "fadeUp").addTo(controller),
+
+    scene = new ScrollMagic.Scene({
+      triggerElement: "#item_two",
+      offset: 60,
+      triggerHook: .3
+    }).setClassToggle("#item_three", "fadeUp").addTo(controller),
+
+    scene = new ScrollMagic.Scene({
+      triggerElement: "#item_two",
+      offset: 60,
+      triggerHook: .2
+    }).setClassToggle("#item_four", "fadeUp").addTo(controller)
+
   $("#project-1").animatedModal({
     modalTarget: 'project-1-modal',
     animatedIn: 'fadeInUp',

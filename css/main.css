@@ -1,6 +1,6 @@
 body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Effra Light', Helvetica, Arial, sans-serif; }
 
-#preloader { position: fixed; height: 100%; width: 100%; background: white; z-index: 100; overflow: hidden; top: 0; }
+#preloader { position: fixed; height: 100%; width: 100%; background: white; z-index: 100; overflow: hidden; display: none; top: 0; }
 
 #preloader .spinner { top: 45%; position: absolute; width: 100%; transform: translateY(-50%); height: 40px; text-align: center; font-size: 10px; }
 
@@ -34,11 +34,11 @@ nav { position: fixed; z-index: 1000; transition: 0.2s ease-in-out; width: 100%;
 
 @media screen and (max-width: 767px) { nav { height: 70px; } }
 
-nav ul { display: block; list-style: none; transition: 0.2s ease-in-out; position: fixed; right: 100px; top: 50%; position: absolute; transform: translateY(-50%); padding: 0; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
+nav ul { display: block; list-style: none; float: right; transition: 0.2s ease-in-out; margin: 0; padding: 0; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
 
-@media only screen and (max-width: 767px) { nav ul { height: 0; right: 0; width: 100%; overflow: hidden; top: 100%; transform: none; background: white; } }
+@media only screen and (max-width: 767px) { nav ul { height: 0; right: 0; width: 100%; overflow: hidden; top: 100%; transform: none; margin-top: -1px; background: white; } }
 
-nav ul li { display: inline-block; margin: 0 25px; }
+nav ul li { display: inline-block; margin: 15px 25px 14px; }
 
 @media only screen and (max-width: 767px) { nav ul li { display: block; } }
 
@@ -56,13 +56,17 @@ nav ul li a.active::before, nav ul li a:hover::before { -webkit-transform: scale
 
 @media only screen and (max-width: 767px) { nav ul.open { display: block; height: 170px; } }
 
-nav .logo { font-size: 36px; color: black; letter-spacing: 4px; position: relative; top: 50%; transform: translateY(-50%); left: 100px; display: inline-block; }
+nav .logo { font-size: 36px; color: black; letter-spacing: 4px; position: relative; display: inline-block; margin: 10px; }
 
 @media screen and (max-width: 767px) { nav .logo { left: 15px; } }
 
+@media (max-width: 799px) { nav .logo.desktop { display: none; } }
+
+@media (min-width: 800px) { nav .logo.mobile { display: none; } }
+
 nav .logo:hover { color: #6441A5; text-decoration: none !important; transition: 0.1s; border: none; }
 
-nav #menu-toggle { margin: 15px; width: 40px; height: 40px; position: relative; cursor: pointer; z-index: 200; background-color: transparent; border: 0; float: right; outline: 0; }
+nav #menu-toggle { margin: 15px; width: 40px; height: 40px; position: absolute; cursor: pointer; z-index: 200; background-color: transparent; border: 0; outline: 0; right: 0; top: 0; }
 
 @media only screen and (min-width: 768px) { nav #menu-toggle { display: none; } }
 
@@ -102,9 +106,7 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 
 @media only screen and (max-width: 480px) { nav #menu-toggle #hamburger span { width: 80%; height: 1px; margin: 0 0 5px; } }
 
-#particles { height: 100vh; width: 100%; max-height: 100vh; max-width: 100vw; background-image: linear-gradient(15deg, #2a0845 0%, #6441A5 100%); position: fixed; }
-
-.opener { height: 100vh; width: 100%; max-height: 100vh; max-width: 100vw; display: block; position: relative; margin: 0; }
+.opener { height: 100vh; width: 100%; max-height: 100vh; max-width: 100vw; display: none; position: relative; margin: 0; }
 
 @media screen and (max-width: 767px) { .opener { height: 90vh; } }
 
@@ -164,11 +166,11 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 
 @media screen and (max-width: 991px) { .portfolio { padding: 0; } }
 
-.portfolio .grid-item { margin: 25px; width: calc(50% - 50px); float: left; overflow: hidden; box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.25); transition: all 0.5s linear; }
+.portfolio .grid-item { margin: 25px; width: calc(50% - 50px); float: left; overflow: hidden; opacity: 0; box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.25); transition: all 0.5s linear; }
 
 @media screen and (max-width: 991px) { .portfolio .grid-item { padding: 0; } }
 
-@media screen and (max-width: 767px) { .portfolio .grid-item { width: 100% !important; height: 300px !important; margin-bottom: 30px; } }
+@media screen and (max-width: 767px) { .portfolio .grid-item { margin: 35px 50px 0; width: calc(100% - 100px); height: 300px !important; } }
 
 .portfolio .grid-item.fadeUp { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1 !important; }
 
@@ -206,7 +208,7 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 
 @media screen and (max-width: 767px) { .portfolio .grid-item .picture .overlay { padding: 0; } }
 
-footer { background: #F9F9F9; position: relative; display: block; padding: 100px 15px 40px; height: 52vh; }
+footer { background: #F9F9F9; position: relative; display: block; padding: 40px 15px 40px; }
 
 @media screen and (max-width: 991px) { footer { height: auto; } }
 
@@ -226,7 +228,7 @@ footer a::before { color: #6441A5; text-shadow: 0 0 1px rgba(100, 65, 165, 0.3);
 
 footer a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: #6441A5; opacity: 0; -webkit-transform: translateY(3px); -moz-transform: translateY(3px); transform: translateY(3px); -webkit-transition: -webkit-transform 0.3s, opacity 0.3s; -moz-transition: -moz-transform 0.3s, opacity 0.3s; transition: transform 0.3s, opacity 0.3s; pointer-events: none; }
 
-footer .copyright { font-size: 15px; letter-spacing: 0; margin-top: 100px; display: inline-block; width: 100%; }
+footer .copyright { font-size: 14px; letter-spacing: 0; margin-top: 30px; display: inline-block; width: 100%; }
 
 @media screen and (max-width: 991px) { footer .copyright { position: relative; } }
 

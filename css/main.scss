@@ -5,13 +5,15 @@ $black: black;
 $color-one: #2a0845;
 $color-two: #6441A5;
 
-@mixin transform($transform...) {
-	-webkit-transform: $transform;
-	-moz-transform: $transform;
-	-ms-transform: $transform;
-	-o-transform: $transform;
-	transform: $transform;
-}
+$breakpoints: (
+  xs: 576px,
+  sm: 800px,
+  md: 992px,
+  lg: 1200px,
+	nav: 992px
+);
+
+@import "mixins";
 
 body {
     margin: 0;
@@ -31,6 +33,7 @@ body {
     background: white;
     z-index: 100;
     overflow: hidden;
+		display: none;
     top: 0;
 
     .spinner {
@@ -133,12 +136,9 @@ nav {
     ul {
         display: block;
         list-style: none;
+				float: right;
         transition: 0.2s ease-in-out;
-        position: fixed;
-        right: 100px;
-        top: 50%;
-        position: absolute;
-        transform: translateY(-50%);
+				margin: 0;
         padding: 0;
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
@@ -151,12 +151,13 @@ nav {
             overflow: hidden;
             top: 100%;
             transform: none;
+						margin-top: -1px;
             background: white;
         }
 
         li {
             display: inline-block;
-            margin: 0 25px;
+            margin: 15px 25px 14px;
             @media only screen and (max-width: 767px) {
                 display: block;
             }
@@ -222,13 +223,21 @@ nav {
         color: $black;
         letter-spacing: 4px;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 100px;
         display: inline-block;
+				margin: 10px;
         @media screen and (max-width: 767px) {
             left: 15px;
         }
+				&.desktop{
+					@include respond-below(sm){
+						display: none;
+					}
+				}
+				&.mobile{
+					@include respond-above(sm){
+						display: none;
+					}
+				}
 
         &:hover {
             color: $color-two;
@@ -242,13 +251,15 @@ nav {
         margin: 15px;
         width: 40px;
         height: 40px;
-        position: relative;
+        position: absolute;
         cursor: pointer;
         z-index: 200;
         background-color: transparent;
         border: 0;
-        float: right;
+        // float: right;
         outline: 0;
+				right: 0;
+				top: 0;
         @media only screen and (min-width: 768px) {
             display: none;
         }
@@ -366,20 +377,13 @@ nav {
         }
     }
 }
-#particles{
-  height: 100vh;
-  width: 100%;
-  max-height: 100vh;
-  max-width: 100vw;
-  background-image: linear-gradient(15deg, $color-one 0%, $color-two 100%);
-  position: fixed;
-}
+
 .opener {
     height: 100vh;
     width: 100%;
     max-height: 100vh;
     max-width: 100vw;
-    display: block;
+    display: none;
     position: relative;
     margin: 0;
     @media screen and (max-width: 767px) {
@@ -573,16 +577,16 @@ nav {
         width: calc(50% - 50px);
         float: left;
         overflow: hidden;
-        // opacity: 0;
+        opacity: 0;
 				box-shadow: 0 9px 32px 0 rgba(0,0,0,0.25);
         transition: all 0.5s linear;
         @media screen and (max-width: 991px) {
             padding: 0;
         }
         @media screen and (max-width: 767px) {
-            width: 100% !important;
+					margin: 35px 50px 0;
+						width: calc(100% - 100px);
             height: 300px !important;
-            margin-bottom: 30px;
         }
 
         &.fadeUp {
@@ -714,9 +718,7 @@ footer {
     background: $light-gray;
     position: relative;
     display: block;
-    padding: 100px 15px 40px;
-    height: 52vh;
-    // position: relative;
+    padding: 40px 15px 40px;
     @media screen and (max-width: 991px) {
         height: auto;
     }
@@ -788,9 +790,9 @@ footer {
     }
 
     .copyright {
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 0;
-        margin-top: 100px;
+        margin-top: 30px;
         display: inline-block;
         width: 100%;
         @media screen and (max-width: 991px) {
