@@ -7,282 +7,277 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>caomicc</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>caomicc</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="//fonts.googleapis.com/css?family=Muli:400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/Morphext/dist/morphext.css">
+  <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="//fonts.googleapis.com/css?family=Muli:400,400i,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="/node_modules/Morphext/dist/morphext.css">
-    <link rel="stylesheet" href="/css/main.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/js/animatedModal.min.js"></script>
+  <script src="/node_modules/particles.js-master/particles.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="/node_modules/Morphext/dist/morphext.min.js"></script>
+  <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+  <script src="/node_modules/gsap/TweenLite.js"></script>
+  <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/js/animatedModal.min.js"></script>
-    <script src="/node_modules/particles.js-master/particles.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="/node_modules/Morphext/dist/morphext.min.js"></script>
-    <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-    <script src="/node_modules/gsap/TweenLite.js"></script>
-    <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-    <script src="/js/main.js"></script>
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-104154357-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-104154357-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body class="loading">
-    <!--[if lt IE 8]>
+  <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div id="preloader">
-        <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-        </div>
+  <div id="preloader">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
     </div>
-    <div id="particles"></div>
-    <div id="cage">
-        <nav>
-            <a class="logo" href="#home">CEO</a>
-            <ul class="nav-items">
-                <li>
-                    <a href="#home" id="nav1">Hom<span>e</span></a>
-                </li>
-                <li>
-                    <a href="#about" id="nav2">Abou<span>t</span></a>
-                </li>
-                <li>
-                    <a href="#work" id="nav3">Wor<span>k</span></a>
-                </li>
-                <li>
-                    <a href="#footer" id="nav4">Contac<span>t</span></a>
-                </li>
-            </ul>
-            <button id="menu-toggle" type="button" class=""> <strong id="hamburger"> <span></span> <span></span> <span></span> <span></span> </strong> <strong id="cross"> <span></span> <span></span> </strong> </button>
-        </nav>
-        <div class="opener" id="home">
-            <div class="middle">
-                <h1 class="" id="trigger">Cameron Omiccioli</h1>
-                <h2 class="">Front End Web Developer.
+  </div>
+  <div id="particles"></div>
+  <div id="cage">
+    <nav>
+      <a class="logo" href="#home">CEO</a>
+      <ul class="nav-items">
+        <li>
+          <a href="#home" id="nav1">Hom<span>e</span></a>
+        </li>
+        <li>
+          <a href="#about" id="nav2">Abou<span>t</span></a>
+        </li>
+        <li>
+          <a href="#work" id="nav3">Wor<span>k</span></a>
+        </li>
+        <li>
+          <a href="#footer" id="nav4">Contac<span>t</span></a>
+        </li>
+      </ul>
+      <button id="menu-toggle" type="button" class=""> <strong id="hamburger"> <span></span> <span></span> <span></span> <span></span> </strong> <strong id="cross"> <span></span> <span></span> </strong> </button>
+    </nav>
+    <div class="opener" id="home">
+      <div class="middle">
+        <h1 class="" id="trigger">Cameron Omiccioli</h1>
+        <h2 class="">Front End Web Developer.
                 <div class="rotating-text" id="js-rotating">
                   Brakes for small animals., Is not good at roller skating., Enjoys listening to Brand New., Wears a decent amount of black., Is secretly the Dayman., Runs on Dunkin'., Enjoys the company of gerbils.
                 </div>
             </h2>
+      </div>
+    </div>
+    <div class="moi" id="about">
+      <div class="container">
+        <div class="middle row">
+          <div class="picture col-md-4 col-md-offset-0 col-sm-4" id="animate">
+            <div class="innards" style="background-image:url('/images/me.jpg')">
             </div>
+          </div>
+          <div class="text col-md-7 col-sm-12 col-md-offset-1 col-sm-8" id="animate-two">
+            <h2>Hi There! &nbsp;<span id="hand" class="animated ">&#x1F44B;</span></h2>
+            <p class="intro">
+              I am a front-end web developer from Holliston, MA. I am currently employed at <a href="http://membersfirst.com">MembersFirst</a> (which you should totally check out if you design or develop websites).
+            </p>
+            <p>
+              I spend my days being a code monkey and turning mockups into responsive websites. I also like spending time with my chinchilla and cockatiel, and watching “It’s Always Sunny in Philadelphia”.
+            </p>
+          </div>
         </div>
-        <div class="moi" id="about">
-            <div class="container">
-                <div class="middle row">
-                    <div class="picture col-md-4 col-md-offset-0 col-sm-4" id="animate">
-                        <div class="innards" style="background-image:url('/images/me.jpg')">
-                        </div>
-                    </div>
-                    <div class="text col-md-7 col-sm-12 col-md-offset-1 col-sm-8" id="animate-two">
-                        <h2>Hi There! &nbsp;<span id="hand" class="animated ">&#x1F44B;</span></h2>
-                        <p class="intro">
-                            I am a front-end web developer from Holliston, MA. I am currently employed at <a href="http://membersfirst.com">MembersFirst</a> (which you should totally check out if you design or develop websites).
-                        </p>
-                        <p>
-                            I spend my days being a code monkey and turning mockups into responsive websites. I also like spending time with my chinchilla and cockatiel, and watching “It’s Always Sunny in Philadelphia”.
-                        </p>
-                    </div>
-                </div>
+      </div>
+      <span id="grid-trigger"></span>
+    </div>
+    <div class="portfolio container-fluid" id="work">
+      <div class="row">
+        <div class="grid-item top animated" id="colleton">
+          <a href="#project-1-modal" id="project-1" class="picture">
+            <div class="image-mask" style="background-image:url('/images/colleton.png')"></div>
+            <div class="overlay">
+              <p class="title">Colleton River Club</p><br />
+              <p>Developer</p>
             </div>
-            <span id="grid-trigger"></span>
+          </a>
         </div>
-        <div class="portfolio container-fluid" id="work">
-            <div class="row">
-                <div class="grid-item top animated" id="colleton">
-                    <a href="#project-1-modal" id="project-1" class="picture">
-                        <div class="image-mask" style="background-image:url('/images/colleton.png')"></div>
-                        <div class="overlay">
-                            <p class="title">Colleton River Club</p><br />
-                            <p>Developer</p>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="grid-item bottom animated" id="manch">
-                    <a href="#project-2-modal" id="project-2" class="picture">
-                        <div class="image-mask" style="background-image:url('/images/manchester.png')"></div>
-                        <div class="overlay">
-                            <p class="title">Manchester Country Club</p><br />
-                            <p>Developer</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="grid-item bottom animated" id="cal">
-                    <a href="#project-3-modal" id="project-3" class="picture">
-                        <div class="image-mask" style="background-image:url('/images/calendar.png')"></div>
-                        <div class="overlay">
-                            <p class="title">Calendar Module</p><br />
-                            <p>Developer</p>
-                            <p>Designer</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="grid-item top animated" id="realestate">
-                    <a href="#project-4-modal" id="project-4" class="picture">
-                        <div class="image-mask" style="background-image:url('/images/realestatelaptop.png')"></div>
-                        <div class="overlay">
-                            <p class="title">Real Estate Module</p><br />
-                            <p>Developer</p>
-                            <p>Designer</p>
-                        </div>
-                    </a>
-                </div>
-
+        <div class="grid-item bottom animated" id="manch">
+          <a href="#project-2-modal" id="project-2" class="picture">
+            <div class="image-mask" style="background-image:url('/images/manchester.png')"></div>
+            <div class="overlay">
+              <p class="title">Manchester Country Club</p><br />
+              <p>Developer</p>
             </div>
-            <span id="workend"></span>
+          </a>
         </div>
-        <footer class="container-fluid" id="footer">
-            <div class="row">
-                <div class="col-xs-12 text-box text-center">
-                    <p>
-                        Have an idea? Feeling crafty?<br /> I am currently available for freelance work and/or friendly conversation!<br /><br />
-                        <a href="mailto:caomicc@gmail.com">Shoot me an email</a> &nbsp;&nbsp;&nbsp;&nbsp;&#x1F4E8;
-                    </p>
-                </div>
+
+        <div class="grid-item bottom animated" id="cal">
+          <a href="#project-3-modal" id="project-3" class="picture">
+            <div class="image-mask" style="background-image:url('/images/calendar.png')"></div>
+            <div class="overlay">
+              <p class="title">Calendar Module</p><br />
+              <p>Developer</p>
+              <p>Designer</p>
             </div>
-            <div class="row">
-                <div class="col-xs-12 text-box text-center">
-                    <span class="copyright">Copyright &copy; 2018 by yours truly.<br />Made with &#x1F49C; and &#x2728;</span>
-                </div>
+          </a>
+        </div>
+
+        <div class="grid-item top animated" id="realestate">
+          <a href="#project-4-modal" id="project-4" class="picture">
+            <div class="image-mask" style="background-image:url('/images/realestatelaptop.png')"></div>
+            <div class="overlay">
+              <p class="title">Real Estate Module</p><br />
+              <p>Developer</p>
+              <p>Designer</p>
             </div>
-        </footer>
+          </a>
+        </div>
+
+      </div>
+      <span id="workend"></span>
+    </div>
+    <footer class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col-xs-12 text-box text-center">
+          <p>
+            Have an idea? Feeling crafty?<br /> I am currently available for freelance work and/or friendly conversation!<br /><br />
+            <a href="mailto:caomicc@gmail.com">Shoot me an email</a> &nbsp;&nbsp;&nbsp;&nbsp;&#x1F4E8;
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-box text-center">
+          <span class="copyright">Copyright &copy; 2018 by yours truly.<br />Made with &#x1F49C; and &#x2728;</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="project-1-modal" class="portfolio-item-modal">
+    <div id="closebt-container" class="close-project-1-modal">
+      <img class="close-button" src="/images/cross.svg">
     </div>
 
-    <div id="project-1-modal" class="portfolio-item-modal">
-        <div id="closebt-container" class="close-project-1-modal">
-            <img class="close-button" src="/images/cross.svg">
+    <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
+      <div class="move-me">
+        <h2>Colleton River Club</h2>
+        <div class="role">
+          Role:<br />
+          <span class="tag">Developer</span>
         </div>
-
-        <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
-            <div class="move-me">
-                <h2>Colleton River Club</h2>
-                <div class="role">
-                    Role:<br />
-                    <span class="tag">Developer</span>
-                </div>
-                <div class="specs">
-                    Technologies Used:<br />
-                    <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span> <span class="tag">Adobe Photoshop</span> <span class="tag">Adobe Illustrator</span> <span class="tag">Propriatary Software/CMS</span>
-                </div>
-                <p>
-                    Designed by MembersFirst.
-                </p>
-                <p>
-                    Launched August 2017
-                </p>
-            </div>
+        <div class="specs">
+          Technologies Used:<br />
+          <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span> <span class="tag">Adobe Photoshop</span> <span class="tag">Adobe Illustrator</span> <span class="tag">Propriatary Software/CMS</span>
         </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/colletonopener.jpg')"></div>
+        <p>
+          Designed by MembersFirst.
+        </p>
+        <p>
+          Launched August 2017
+        </p>
+      </div>
     </div>
+    <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/colletonopener.jpg')"></div>
+  </div>
 
-    <div id="project-2-modal" class="portfolio-item-modal">
-        <div id="closebt-container" class="close-project-2-modal">
-            <img class="close-button" src="/images/cross.svg">
-        </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
-            <div class="move-me">
-                <h2>Manchester Country Club</h2>
-                <div class="role">
-                    Role:<br />
-                    <span class="tag">Developer</span>
-                </div>
-                <div class="specs">
-                    Technologies Used:<br />
-                    <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span> <span class="tag">Adobe Photoshop</span> <span class="tag">Adobe Illustrator</span> <span class="tag">Propriatary Software/CMS</span>
-                </div>
-                <p>
-                    Designed by MembersFirst.
-                </p>
-                <p>
-                    Launched August 2017
-                </p>
-                <a href="http://www.manchestercountryclub.com/" target="_blank" class="visit">Visit Site</a>
-            </div>
-        </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/manchesteropener2.jpg')"></div>
+  <div id="project-2-modal" class="portfolio-item-modal">
+    <div id="closebt-container" class="close-project-2-modal">
+      <img class="close-button" src="/images/cross.svg">
     </div>
-
-    <div id="project-3-modal" class="portfolio-item-modal">
-        <div id="closebt-container" class="close-project-3-modal">
-            <img class="close-button" src="/images/cross.svg">
+    <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
+      <div class="move-me">
+        <h2>Manchester Country Club</h2>
+        <div class="role">
+          Role:<br />
+          <span class="tag">Developer</span>
         </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
-            <div class="move-me">
-                <h2>Calendar Module</h2>
-                <div class="role">
-                    Role:<br />
-                    <span class="tag">Developer</span> <span class="tag">Designer</span>
-                </div>
-                <div class="specs">
-                    Technologies Used:<br />
-                    <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span>
-                </div>
-                <p>
-                    Designed for MembersFirst.
-                </p>
-                <p>
-                    Launched July 2017
-                </p>
-
-            </div>
+        <div class="specs">
+          Technologies Used:<br />
+          <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span> <span class="tag">Adobe Photoshop</span> <span class="tag">Adobe Illustrator</span> <span class="tag">Propriatary Software/CMS</span>
         </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/calendaropener.jpg')"></div>
+        <p>
+          Designed by MembersFirst.
+        </p>
+        <p>
+          Launched August 2017
+        </p>
+        <a href="http://www.manchestercountryclub.com/" target="_blank" class="visit">Visit Site</a>
+      </div>
     </div>
+    <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/manchesteropener2.jpg')"></div>
+  </div>
 
-    <div id="project-4-modal" class="portfolio-item-modal">
-        <div id="closebt-container" class="close-project-4-modal">
-            <img class="close-button" src="/images/cross.svg">
-        </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
-            <div class="move-me">
-                <h2>Real Estate Module</h2>
-                <div class="role">
-                    Role:<br />
-                    <span class="tag">Developer</span>
-                </div>
-                <div class="specs">
-                    Technologies Used:<br />
-                    <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span>
-                </div>
-                <p>
-                    Designed for MembersFirst.
-                </p>
-                <p>
-                    Launched April 2017
-                </p>
-            </div>
-        </div>
-        <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/realestateopener.jpg')"></div>
+  <div id="project-3-modal" class="portfolio-item-modal">
+    <div id="closebt-container" class="close-project-3-modal">
+      <img class="close-button" src="/images/cross.svg">
     </div>
+    <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
+      <div class="move-me">
+        <h2>Calendar Module</h2>
+        <div class="role">
+          Role:<br />
+          <span class="tag">Developer</span> <span class="tag">Designer</span>
+        </div>
+        <div class="specs">
+          Technologies Used:<br />
+          <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span>
+        </div>
+        <p>
+          Designed for MembersFirst.
+        </p>
+        <p>
+          Launched July 2017
+        </p>
 
+      </div>
+    </div>
+    <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/calendaropener.jpg')"></div>
+  </div>
 
-
+  <div id="project-4-modal" class="portfolio-item-modal">
+    <div id="closebt-container" class="close-project-4-modal">
+      <img class="close-button" src="/images/cross.svg">
+    </div>
+    <div id="modal-container" class="col-md-6 col-xs-12 text-panel">
+      <div class="move-me">
+        <h2>Real Estate Module</h2>
+        <div class="role">
+          Role:<br />
+          <span class="tag">Developer</span>
+        </div>
+        <div class="specs">
+          Technologies Used:<br />
+          <span class="tag">HTML</span> <span class="tag">SCSS/CSS</span> <span class="tag">Javascript</span> <span class="tag">jQuery</span>
+        </div>
+        <p>
+          Designed for MembersFirst.
+        </p>
+        <p>
+          Launched April 2017
+        </p>
+      </div>
+    </div>
+    <div id="modal-container" class="col-md-6 col-xs-12 image-panel" style="background-image:url('/images/realestateopener.jpg')"></div>
+  </div>
 </body>
 
 </html>

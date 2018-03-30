@@ -56,22 +56,8 @@ $(document).ready(function() {
             triggerElement: "#realestate",
             offset: 60,
             triggerHook: .2
-        }).setClassToggle("#wac", "fadeUp").addTo(controller),
-        scene = new ScrollMagic.Scene({
-            triggerElement: "#realestate",
-            offset: 60,
-            triggerHook: .1
-        }).setClassToggle("#mwrta", "fadeUp").addTo(controller),
-        scene = new ScrollMagic.Scene({
-            triggerElement: "#mwrta",
-            offset: 60,
-            triggerHook: .2
-        }).setClassToggle("#edgartown", "fadeUp").addTo(controller),
-        scene = new ScrollMagic.Scene({
-            triggerElement: "#mwrta",
-            offset: 60,
-            triggerHook: .1
-        }).setClassToggle("#turnerhill", "fadeUp").addTo(controller);
+        }).setClassToggle("#wac", "fadeUp").addTo(controller)
+
     particlesJS.load('particles', 'node_modules/particles.js-master/particles.json', function() {});
     $("#project-1").animatedModal({
         modalTarget: 'project-1-modal',
@@ -100,38 +86,6 @@ $(document).ready(function() {
 
     $("#project-4").animatedModal({
         modalTarget: 'project-4-modal',
-        animatedIn: 'fadeInUp',
-        animatedOut: 'fadeOutDown',
-        color: '#ffffff',
-        animationDuration: '.8s',
-    });
-
-    $("#project-5").animatedModal({
-        modalTarget: 'project-5-modal',
-        animatedIn: 'fadeInUp',
-        animatedOut: 'fadeOutDown',
-        color: '#ffffff',
-        animationDuration: '.8s',
-    });
-
-    $("#project-6").animatedModal({
-        modalTarget: 'project-6-modal',
-        animatedIn: 'fadeInUp',
-        animatedOut: 'fadeOutDown',
-        color: '#ffffff',
-        animationDuration: '.8s',
-    });
-
-    $("#project-7").animatedModal({
-        modalTarget: 'project-7-modal',
-        animatedIn: 'fadeInUp',
-        animatedOut: 'fadeOutDown',
-        color: '#ffffff',
-        animationDuration: '.8s',
-    });
-
-    $("#project-8").animatedModal({
-        modalTarget: 'project-8-modal',
         animatedIn: 'fadeInUp',
         animatedOut: 'fadeOutDown',
         color: '#ffffff',
