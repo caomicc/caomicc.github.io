@@ -143,6 +143,6 @@ function resizeGrid() {
     var doubleHeight = startHeight * 2;
     var doubleWidth = startWidth * 2;
     $('#work .grid-item').css("height", startHeight);
-    $('#work .grid-item:nth-of-type(1)').css("height", startHeight * 2);
-    $('#work .grid-item:nth-of-type(4)').css("width", "100%");
+    $('#work .grid-item:nth-of-type(4)').css("height", startHeight * 2);
+    $('#work .grid-item:nth-of-type(1)').css("width", "100%");
 }
