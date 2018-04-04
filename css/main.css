@@ -186,11 +186,11 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 
 .portfolio .grid-item .picture { display: block; width: 100%; padding: 30px; height: auto; position: relative; overflow: hidden; background-size: cover; background-color: #F9F9F9; background-position: center center; height: 100%; }
 
-.portfolio .grid-item .picture:before { content: ""; padding-top: 70%; width: 100%; display: block; }
+.portfolio .grid-item .picture:before { content: ""; padding-top: 62.5%; width: 100%; display: block; }
 
 .portfolio .grid-item .picture .image-mask { background-size: cover; position: absolute; background-position: center; top: 0; left: 0; width: 100%; height: 100%; transition: 0.5s ease-in-out; background-repeat: no-repeat; }
 
-.portfolio .grid-item .picture .image-mask:before { content: ""; padding-top: 70%; width: 100%; display: block; }
+.portfolio .grid-item .picture .image-mask:before { content: ""; padding-top: 62.5%; width: 100%; display: block; }
 
 .portfolio .grid-item .picture:hover .image-mask { transform: scale3d(1.05, 1.05, 1); }
 
@@ -208,7 +208,7 @@ nav #menu-toggle.open #cross span:nth-child(2) { width: 50%; transition-delay: 0
 
 @media screen and (max-width: 767px) { .portfolio .grid-item .picture .overlay { padding: 0; } }
 
-footer { background: #F9F9F9; position: relative; display: block; padding: 40px 15px 40px; }
+footer { background: #F9F9F9; position: relative; display: block; padding: 40px 15px; }
 
 @media screen and (max-width: 991px) { footer { height: auto; } }
 
@@ -288,7 +288,7 @@ footer .copyright { font-size: 14px; letter-spacing: 0; margin-top: 30px; displa
 
 .posty .feelingwhitney .goflex { position: absolute; top: 50%; width: calc(100% - 20px); padding: 0; max-width: 480px; text-align: center; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
 
-.posty .feelingwhitney .goflex .title { font-size: 80px; color: white; font-weight: bold; letter-spacing: 8px; line-height: .8; }
+.posty .feelingwhitney .goflex .title { font-size: 80px; color: white; font-weight: bold; letter-spacing: 8px; line-height: 0.8; }
 
 .posty .feelingwhitney .goflex .subTitle { font-size: 30px; color: white; letter-spacing: 8px; margin-bottom: 40px; }
 
