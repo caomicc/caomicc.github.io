@@ -1,0 +1,78 @@
+@import 'mixins';
+
+$text-color: #222629;
+$light-gray: #F9F9F9;
+$white: white;
+$black: black;
+$color-one: #2a0845;
+$color-two: #6441A5;
+$link-color: #0645AD;
+
+a{
+  color: $link-color;
+}
+
+.portfolio-left{
+  left: 0;
+  overflow: hidden;
+  font-family: 'Libre Franklin', sans-serif;
+  background: $color-two;
+  .innards{
+    top: 50%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    @include transform(translateY(-50%));
+    text-align: center;
+    h1, h2{
+      color: white;
+    }
+  }
+}
+.portfolio-right {
+  font-family: 'Roboto Mono', monospace;
+  right: 0;
+  overflow: auto;
+  .header-image{
+    display: block;
+    width: 100%;
+    height: 350px;
+    background: red;
+    background-position: center;
+    background-size: cover;
+  }
+  .text{
+    padding: 60px;
+    .h2{
+      font-weight: 300;
+      font-size: 18px;
+      margin: 0;
+    }
+    .opener{
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    .entry{
+      padding-top: 16px;
+      padding-bottom: 16px;
+      h3{
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0;
+        margin: 0;
+        a{
+          color: $link-color;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-left, .portfolio-right {
+  display: block;
+  position: fixed;
+  width: 50%;
+  top: 0;
+  height: 100%;
+}

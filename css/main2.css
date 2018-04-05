@@ -1,0 +1,25 @@
+a { color: #0645AD; }
+
+.portfolio-left { left: 0; overflow: hidden; font-family: 'Libre Franklin', sans-serif; background: #6441A5; }
+
+.portfolio-left .innards { top: 50%; width: 100%; display: block; position: absolute; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); text-align: center; }
+
+.portfolio-left .innards h1, .portfolio-left .innards h2 { color: white; }
+
+.portfolio-right { font-family: 'Roboto Mono', monospace; right: 0; overflow: auto; }
+
+.portfolio-right .header-image { display: block; width: 100%; height: 350px; background: red; background-position: center; background-size: cover; }
+
+.portfolio-right .text { padding: 60px; }
+
+.portfolio-right .text .h2 { font-weight: 300; font-size: 18px; margin: 0; }
+
+.portfolio-right .text .opener { padding-top: 16px; padding-bottom: 16px; }
+
+.portfolio-right .text .entry { padding-top: 16px; padding-bottom: 16px; }
+
+.portfolio-right .text .entry h3 { font-weight: 900; font-size: 14px; line-height: 22px; padding: 0; margin: 0; }
+
+.portfolio-right .text .entry h3 a { color: #0645AD; }
+
+.portfolio-left, .portfolio-right { display: block; position: fixed; width: 50%; top: 0; height: 100%; }
