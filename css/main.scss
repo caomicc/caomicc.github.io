@@ -4,6 +4,7 @@ $white: white;
 $black: black;
 $color-one: #2a0845;
 $color-two: #6441A5;
+
 @mixin transform($transform...) {
   -webkit-transform: $transform;
   -moz-transform: $transform;
