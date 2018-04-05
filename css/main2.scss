@@ -47,6 +47,9 @@ a{
     bottom: 1.25em;
     z-index: 200;
     left: 0;
+    @include respond-below(xs){
+      padding: 0 15px 10px;
+    };
     ul{
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -145,6 +148,9 @@ a{
   }
   .text{
     padding: 80px 40px 30px;
+    @include respond-below(xs){
+      padding: 30px 15px 30px;
+    };
     .h2{
       font-weight: 300;
       font-size: 18px;
@@ -186,6 +192,9 @@ a{
   footer{
     padding: 0 40px 80px;
     position: relative;
+    @include respond-below(xs){
+      padding: 0 15px 80px;
+    };
   }
 
 }

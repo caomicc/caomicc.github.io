@@ -8,6 +8,8 @@ a:hover { color: #222629; border-bottom: 1px #222629 dotted; text-decoration: no
 
 .portfolio-left .contact-details, .portfolio-right .contact-details { position: absolute; width: 100%; padding: 0 40px; bottom: 1.25em; z-index: 200; left: 0; }
 
+@media (max-width: 575px) { .portfolio-left .contact-details, .portfolio-right .contact-details { padding: 0 15px 10px; } }
+
 .portfolio-left .contact-details ul, .portfolio-right .contact-details ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; list-style: none; margin: 0; padding: 0; }
 
 .portfolio-left .contact-details ul li, .portfolio-right .contact-details ul li { font-size: 14px; }
@@ -44,6 +46,8 @@ a:hover { color: #222629; border-bottom: 1px #222629 dotted; text-decoration: no
 
 .portfolio-right .text { padding: 80px 40px 30px; }
 
+@media (max-width: 575px) { .portfolio-right .text { padding: 30px 15px 30px; } }
+
 .portfolio-right .text .h2 { font-weight: 300; font-size: 18px; margin: 0; }
 
 .portfolio-right .text .opener { padding-top: 16px; margin: 0; }
@@ -61,3 +65,5 @@ a:hover { color: #222629; border-bottom: 1px #222629 dotted; text-decoration: no
 .portfolio-right .text .entry p { margin: 0; color: #777; }
 
 .portfolio-right footer { padding: 0 40px 80px; position: relative; }
+
+@media (max-width: 575px) { .portfolio-right footer { padding: 0 15px 80px; } }
