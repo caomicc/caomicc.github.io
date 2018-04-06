@@ -12,20 +12,11 @@
   <title>caomicc</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Roboto+Mono:300,400,500" rel="stylesheet">
-  <link rel="stylesheet" href="/node_modules/Morphext/dist/morphext.css">
-  <link rel="stylesheet" href="/css/main2.css">
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="/js/animatedModal.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="/node_modules/Morphext/dist/morphext.min.js"></script>
-  <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-  <script src="/node_modules/gsap/TweenLite.js"></script>
-  <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-  <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addindicators.js"></script>
   <script src="/node_modules/typed.js/lib/typed.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
   <script src="/js/main2.js"></script>
   <script>
     (function(i, s, o, g, r, a, m) {
@@ -43,12 +34,17 @@
     ga('create', 'UA-104154357-1', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Roboto+Mono:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main2.css">
 </head>
 
 <body>
   <div id="portflio">
 
     <div class="portfolio-left">
+      <canvas class="container" id="container-stars" role="main"></canvas>
       <div class="innards">
         <h1>Cameron Omiccioli</h1>
         <h2>front-end developer</h2>
@@ -56,7 +52,7 @@
       <div class="contact-details">
         <ul>
           <li><a href="tel:+5088176770">+1 (508)-817-6770</a></li>
-          <li><a href="https://www.linkedin.com/in/caomicc/">linkedin</a></li>
+          <li><a href="https://www.linkedin.com/in/caomicc">linkedin</a></li>
           <li><a href="mailto:caomicc@gmail.com">caomicc@gmail.com</a></li>
         </ul>
       </div>
@@ -67,8 +63,10 @@
       <div class="text" id="animate-two">
         <span>Hi There! &#x1F44B;</span>
         <p class="opener">
-          I'm Cameron and I'm a front-end developer from Holliston, MA. <br /> Currently, I write code for <a href="https://membersfirst.com">MembersFirst</a>. I'm experienced in html, scss, node, sketch, and js. When I'm not working, I'm normally
-          playing video games, hanging out with my pet chinchilla and cockatiel, or getting into some random shenanigans.
+          I'm Cameron and I'm a front-end developer from Holliston, MA. <br /> Currently, I write code for <a href="https://membersfirst.com">MembersFirst</a>. I'm experienced in html, scss, node, sketch, and js.
+          Often I am described as a hard working, fast learning, and "pixel perfect". I strive to make the integration between design and code fluid and seamless.
+          <br /><br />
+          When I'm not working, I'm normally playing video games, hanging out with my pet chinchilla and cockatiel, or getting into some random shenanigans with my friends.
         </p>
         <br />
         <div class="separator"> ------------------------------------------------------------------------------------------------------------------------------------------------------ </div>
@@ -242,6 +240,8 @@
       </footer>
 
     </div>
+    <div class="blur blurTop"><canvas class="canvas"id="blurCanvasTop"></canvas></div>
+    <div class="blur blurBottom"><canvas width="720px" height="400px" class="canvas" id="blurCanvasBottom"></canvas></div>
 </body>
 
 </html>

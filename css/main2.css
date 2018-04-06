@@ -14,9 +14,7 @@ a:hover { color: #222629; border-bottom: 1px #222629 dotted; text-decoration: no
 
 .portfolio-left .contact-details ul li, .portfolio-right .contact-details ul li { font-size: 14px; }
 
-.portfolio-left .contact-details ul li a, .portfolio-right .contact-details ul li a { transition: 300ms cubic-bezier(0.645, 0.045, 0.355, 1); }
-
-.portfolio-left { left: 0; overflow: hidden; font-family: 'Libre Franklin', sans-serif; background: #222629; }
+.portfolio-left { left: 0; overflow: hidden; font-family: 'Libre Franklin', sans-serif; background: #1488CC; /* fallback for old browsers */ background: -webkit-linear-gradient(to bottom, #2B32B2, #1488CC); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to bottom, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); }
 
 @media (max-width: 849px) { .portfolio-left { height: 250px; padding: 15px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; list-style: none; } }
 
@@ -38,7 +36,19 @@ a:hover { color: #222629; border-bottom: 1px #222629 dotted; text-decoration: no
 
 @media (max-width: 575px) { .portfolio-left .contact-details ul li { font-size: 12px; } }
 
-.portfolio-left .contact-details ul li a { color: #fff; }
+.portfolio-left .contact-details ul li a { color: #fff; border-bottom: 1px transparent dotted; }
+
+.portfolio-left .contact-details ul li a:hover { border-bottom: 1px #fff dotted; text-decoration: none; }
+
+.portfolio-left #blurCanvasTop { left: 0%; top: 0%; position: absolute; }
+
+.portfolio-left #blurCanvasBottom { left: 50%; top: 0; position: absolute; }
+
+.portfolio-left .blur { width: 100%; height: 100%; position: fixed; pointer-events: none; overflow: hidden; }
+
+.portfolio-left .blurTop { left: 40%; top: -110%; transform: rotate(20deg); transform-origin: 0 100%; }
+
+.portfolio-left .blurBottom { left: -60%; top: 100%; transform: rotate(20deg); transform-origin: 100% 0%; }
 
 .portfolio-right { font-family: 'Roboto Mono', monospace; right: 0; overflow: auto; }
 
@@ -46,7 +56,7 @@ a:hover { color: #222629; border-bottom: 1px #222629 dotted; text-decoration: no
 
 .portfolio-right .text { padding: 80px 40px 30px; }
 
-@media (max-width: 575px) { .portfolio-right .text { padding: 30px 15px 30px; } }
+@media (max-width: 575px) { .portfolio-right .text { padding: 30px 15px; } }
 
 .portfolio-right .text .h2 { font-weight: 300; font-size: 18px; margin: 0; }
 
