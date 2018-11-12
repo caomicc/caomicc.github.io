@@ -20,6 +20,11 @@ a {
     border-bottom: 1px $link-color dotted;
     text-decoration: none;
   }
+  i, .fa{
+    font-size: 13px;
+    position: relative;
+    bottom: 1px;
+  }
 }
 
 body {

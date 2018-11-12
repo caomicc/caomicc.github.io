@@ -2,6 +2,8 @@ a { color: #6c71c4; border-bottom: 1px transparent dotted; text-decoration: none
 
 a:hover { color: #6c71c4; border-bottom: 1px #6c71c4 dotted; text-decoration: none; }
 
+a i, a .fa { font-size: 13px; position: relative; bottom: 1px; }
+
 body { background: #222629; display: block; margin: 0; height: 100vh; }
 
 #portfolio { z-index: 2; position: relative; }
