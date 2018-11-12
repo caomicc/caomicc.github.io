@@ -18,6 +18,8 @@ body { background: #222629; display: block; margin: 0; height: 100vh; }
 
 .portfolio-left .contact-details ul li, .portfolio-right .contact-details ul li { font-size: 14px; }
 
+.portfolio-left .contact-details ul li i, .portfolio-left .contact-details ul li .fa, .portfolio-right .contact-details ul li i, .portfolio-right .contact-details ul li .fa { font-size: 13px; position: relative; bottom: 1px; }
+
 .portfolio-left { left: 0; overflow: hidden; font-family: 'Libre Franklin', sans-serif; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 
 @media (max-width: 849px) { .portfolio-left { height: 250px; padding: 15px; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; list-style: none; } }
